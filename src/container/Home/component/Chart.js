@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Radar } from 'react-chartjs-2';
+import { Link } from 'react-router-dom';
 
 // global variable
 let start = 0, end = 0, gap = 10, count = start;

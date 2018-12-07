@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../../logo.svg';
+import './Home.css';
 import Chart from './component/Chart';
-class App extends Component {
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+
+class Home extends Component {
   render() {
     return (
       <div className="App">
@@ -18,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
