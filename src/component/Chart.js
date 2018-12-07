@@ -26,13 +26,14 @@ class Chart extends Component {
       1000
     );
   }
-
+  // stop button function
+  callStop = () => {
+    clearInterval(refreshIntervalId);
+    console.log('stopID: ' + refreshIntervalId);
+  }
   
 
   render() {
-    const call = () => {
-      console.log('safsdfsd');
-    }
     // Rader config initial
     const chartRadarData = {
       labels: ['Attention', 'Emotional Level', 'Fatigue', 'Stress', 'Rational Level'],
@@ -76,7 +77,7 @@ class Chart extends Component {
       <div className="chart">
         Chart Componment
         <Radar data={chartRadarData} options={chartRadarOptions} />
-        <button onClick={call()}>Switch Name</button>
+        <button onClick={this.callStop}>Stop</button>
       </div>
     );
   }
